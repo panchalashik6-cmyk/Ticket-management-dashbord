@@ -1,0 +1,92 @@
+/* Full Notification Center Page Styling */
+.notifications-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1020px;
+}
+
+.notifications-toolbar-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-xs);
+}
+
+.notifications-feed-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+}
+
+.notification-page-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background-color 0.14s ease;
+}
+
+.notification-page-row:last-child {
+  border-bottom: none;
+}
+
+.notification-page-row.unread {
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+.notification-page-row:hover {
+  background-color: var(--bg-subtle);
+}
+
+.notif-row-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.notif-type-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: var(--primary-blue-light);
+  color: var(--primary-blue);
+}
+
+.notif-type-icon.type-ticket_assigned {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+}
+
+.notif-type-icon.type-status_changed {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.notif-type-icon.type-priority_changed {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.notif-row-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}

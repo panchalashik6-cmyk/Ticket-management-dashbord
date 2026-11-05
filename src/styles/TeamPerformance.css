@@ -1,0 +1,263 @@
+/* Support Agents Management Page Styling */
+.team-performance-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.team-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.agents-filter-toolbar {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-xs);
+}
+
+/* Agent Profile Cards Grid */
+.agent-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+.agent-profile-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: var(--shadow-xs);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.agent-profile-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.agent-profile-card.inactive-card {
+  opacity: 0.82;
+  background-color: var(--bg-subtle);
+}
+
+.agent-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.agent-card-identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.agent-card-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #dbeafe;
+}
+
+.agent-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.agent-status-pill.active {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.agent-status-pill.inactive {
+  background-color: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+}
+
+.agent-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.agent-metric-box {
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.agent-metric-num {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.agent-metric-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Workload Bar */
+.agent-workload-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.workload-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.workload-track {
+  width: 100%;
+  height: 8px;
+  border-radius: 9999px;
+  background-color: #e2e8f0;
+  overflow: hidden;
+}
+
+.workload-fill {
+  height: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #3b82f6 0%, #22c55e 100%);
+  transition: width 0.3s ease;
+}
+
+/* Agent Directory Table Card */
+.team-table-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow-xs);
+}
+
+.team-table-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.team-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.team-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 820px;
+}
+
+.team-table thead tr {
+  background-color: #ebf3ff;
+}
+
+body.dark-theme .team-table thead tr {
+  background-color: #0f172a;
+}
+
+.team-table th {
+  padding: 13px 16px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text-dark);
+  white-space: nowrap;
+}
+
+.team-table tbody tr {
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background-color 0.15s ease;
+}
+
+.team-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.team-table tbody tr:hover {
+  background-color: var(--bg-subtle);
+}
+
+.team-table td {
+  padding: 13px 16px;
+  font-size: 13.5px;
+  color: var(--text-primary);
+}
+
+.agent-profile-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.agent-profile-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.agent-profile-name {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.agent-profile-role {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.rate-progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rate-bar-bg {
+  width: 80px;
+  height: 7px;
+  background-color: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.rate-bar-fill {
+  height: 100%;
+  background-color: #22c55e;
+  border-radius: 9999px;
+}

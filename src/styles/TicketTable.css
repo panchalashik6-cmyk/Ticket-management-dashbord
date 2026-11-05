@@ -1,0 +1,315 @@
+/* TicketTable & Ticket Grid Cards Styling - Enterprise SaaS */
+.ticket-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 820px;
+}
+
+.ticket-table thead tr {
+  background-color: #ebf3ff;
+}
+
+body.dark-theme .ticket-table thead tr {
+  background-color: #1e293b;
+}
+
+.ticket-table th {
+  padding: 13px 14px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text-dark);
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.th-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.th-icon {
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+}
+
+.ticket-table tbody tr {
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background-color 0.14s ease;
+}
+
+.ticket-table tbody tr.selected-row {
+  background-color: rgba(59, 130, 246, 0.07);
+}
+
+.ticket-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.ticket-table tbody tr:hover {
+  background-color: var(--bg-subtle);
+}
+
+.ticket-table td {
+  padding: 13px 14px;
+  font-size: 13px;
+  color: var(--text-primary);
+  vertical-align: middle;
+}
+
+/* Ticket ID + Copy Button */
+.ticket-id-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ticket-no-link {
+  font-weight: 700;
+  color: var(--primary-blue);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.ticket-no-link:hover {
+  text-decoration: underline;
+}
+
+.copy-id-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.14s ease;
+}
+
+.copy-id-btn:hover {
+  background-color: var(--bg-subtle);
+  border-color: var(--border-color);
+  color: var(--text-dark);
+}
+
+.copy-id-btn.copied {
+  color: #16a34a;
+}
+
+/* Customer & Subject Cell */
+.ticket-customer-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ticket-customer-name {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.ticket-customer-email {
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+.ticket-subject-sub {
+  font-size: 12px;
+  color: var(--text-secondary);
+  max-width: 240px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+/* Assigned Agent Cell & Inline Quick Select */
+.assigned-agent-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.assigned-agent-avatar {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.unassigned-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #dc2626;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.inline-quick-select {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  max-width: 150px;
+}
+
+.inline-quick-select:focus {
+  border-color: var(--primary-blue);
+}
+
+/* Due Date & Timestamps */
+.due-date-cell {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+  white-space: nowrap;
+  font-size: 12.5px;
+}
+
+.due-date-cell.overdue {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.overdue-tag {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.date-meta-stack {
+  display: flex;
+  flex-direction: column;
+  font-size: 11.5px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Table Row Action Buttons */
+.table-actions-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon-action-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-card);
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.icon-action-btn:hover {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+  background-color: var(--primary-blue-light);
+}
+
+.icon-action-btn.delete:hover {
+  border-color: #ef4444;
+  color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.row-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary-blue);
+  cursor: pointer;
+}
+
+/* Grid / Card View Mode for Tickets */
+.tickets-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 16px;
+  padding: 18px;
+}
+
+.ticket-grid-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: var(--shadow-xs);
+  transition: transform 0.16s ease, box-shadow 0.16s ease,
+    border-color 0.16s ease;
+}
+
+.ticket-grid-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  border-color: #93c5fd;
+}
+
+.ticket-grid-card.selected-card {
+  border-color: var(--primary-blue);
+  background-color: rgba(59, 130, 246, 0.04);
+}
+
+.ticket-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.ticket-card-subject {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.35;
+  display: block;
+  margin: 4px 0;
+}
+
+.ticket-card-subject:hover {
+  color: var(--primary-blue);
+}
+
+.ticket-card-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--text-muted);
+  padding-top: 10px;
+  border-top: 1px solid var(--border-subtle);
+}

@@ -1,0 +1,32 @@
+/* PriorityBadge Styling - Matches Reference Screenshot Pastel Pills */
+.priority-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 13px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.priority-badge.priority-low {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.priority-badge.priority-medium {
+  background-color: #faecd8;
+  color: #4a3520;
+}
+
+.priority-badge.priority-high {
+  background-color: #fce2e6;
+  color: #7f1d1d;
+}
+
+.priority-badge.priority-urgent {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  font-weight: 600;
+}

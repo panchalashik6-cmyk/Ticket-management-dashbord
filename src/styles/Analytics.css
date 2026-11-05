@@ -1,0 +1,63 @@
+/* Analytics Page Styling */
+.analytics-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.analytics-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.analytics-charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.analytics-card {
+  background-color: var(--bg-card);
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: var(--shadow-xs);
+}
+
+.analytics-card.full-width {
+  grid-column: 1 / -1;
+}
+
+.analytics-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.data-source-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 9999px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.data-source-badge.live {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.data-source-badge.historical {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+.analytics-chart-box {
+  width: 100%;
+  height: 290px;
+}

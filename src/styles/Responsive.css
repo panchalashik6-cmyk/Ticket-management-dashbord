@@ -1,0 +1,170 @@
+/* Comprehensive Responsive Design - Desktop, Laptop, Tablet, Mobile */
+
+/* Laptop Screens (1024px - 1366px) */
+@media (max-width: 1366px) {
+  .kpi-grid-six {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .team-kpi-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .filters-controls-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .dashboard-main-grid {
+    grid-template-columns: 1.75fr 1fr;
+  }
+
+  .customers-main-layout {
+    grid-template-columns: 1.25fr 1fr;
+  }
+}
+
+/* Tablet Screens (768px - 1023px) */
+@media (max-width: 1023px) {
+  /* Sidebar becomes a slide-out mobile drawer */
+  .sidebar {
+    transform: translateX(-100%);
+    width: var(--sidebar-width) !important;
+    box-shadow: var(--shadow-md);
+  }
+
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .sidebar-backdrop.active {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.45);
+    z-index: 95;
+  }
+
+  .main-area,
+  .main-area.sidebar-collapsed {
+    margin-left: 0;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+  }
+
+  .header-breadcrumbs {
+    display: none;
+  }
+
+  .page-container {
+    padding: 20px 18px 32px;
+  }
+
+  .kpi-grid-six,
+  .kpi-grid-four,
+  .reports-kpi-grid,
+  .customers-kpi-grid,
+  .analytics-summary-grid,
+  .skeleton-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-main-grid,
+  .details-layout-grid,
+  .customers-main-layout,
+  .dashboard-charts-grid,
+  .reports-charts-grid,
+  .analytics-charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-controls-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Screens (320px - 767px) */
+@media (max-width: 767px) {
+  .top-header {
+    padding: 0 14px;
+    gap: 10px;
+  }
+
+  .header-user-info,
+  .header-kbd-hint {
+    display: none;
+  }
+
+  .header-right {
+    gap: 8px;
+  }
+
+  .notif-dropdown {
+    position: fixed;
+    top: 74px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+  }
+
+  .page-container {
+    padding: 16px 14px 28px;
+  }
+
+  .page-title,
+  .dashboard-heading {
+    font-size: 22px;
+  }
+
+  .kpi-grid-six,
+  .kpi-grid-four,
+  .team-kpi-grid,
+  .reports-kpi-grid,
+  .customers-kpi-grid,
+  .analytics-summary-grid,
+  .skeleton-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-controls-row,
+  .form-grid-two,
+  .settings-grid-two,
+  .modal-form-row,
+  .tickets-card-grid,
+  .agent-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .create-form-card,
+  .details-card,
+  .settings-card,
+  .dash-card,
+  .customers-list-card,
+  .customer-details-panel {
+    padding: 16px;
+  }
+
+  .pagination-bar,
+  .bulk-actions-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-actions-bar {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .form-actions-bar .btn {
+    width: 100%;
+  }
+
+  .notification-page-row {
+    flex-direction: column;
+  }
+}

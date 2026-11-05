@@ -1,0 +1,330 @@
+/* TicketDetails Page Styling */
+.ticket-details-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.details-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.details-top-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Main 2-Column Layout */
+.details-layout-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.details-main-col,
+.details-side-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.details-card {
+  background-color: var(--bg-card);
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 22px 24px;
+  box-shadow: var(--shadow-xs);
+}
+
+.ticket-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.ticket-id-pill {
+  background-color: #ebf3ff;
+  color: var(--primary-blue);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.ticket-category-pill {
+  background-color: #f1f5f9;
+  color: #475569;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.ticket-subject-heading {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+
+.ticket-description-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+/* Conversation & Internal Notes Section */
+.conversation-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.comment-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px 16px;
+  background-color: var(--bg-card);
+}
+
+.comment-item.internal-note {
+  background-color: #fffbeb;
+  border-color: #fde68a;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.comment-author-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comment-author-name {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: var(--text-dark);
+}
+
+.comment-type-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 9999px;
+}
+
+.comment-type-badge.public {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+.comment-type-badge.internal {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.comment-time {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.comment-body {
+  font-size: 13.5px;
+  color: var(--text-primary);
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+/* Reply Form */
+.reply-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.reply-tab-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background-color: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.reply-tab-btn.active-public {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: #ffffff;
+}
+
+.reply-tab-btn.active-internal {
+  background-color: #d97706;
+  border-color: #d97706;
+  color: #ffffff;
+}
+
+.reply-textarea {
+  width: 100%;
+  min-height: 95px;
+  padding: 11px 13px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 13.5px;
+  outline: none;
+  resize: vertical;
+  margin-bottom: 8px;
+}
+
+.reply-textarea:focus {
+  border-color: var(--primary-blue);
+}
+
+/* Right Column: Ticket Info & Workflow Controls */
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 13.5px;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.info-label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.info-value {
+  color: var(--text-dark);
+  font-weight: 600;
+  text-align: right;
+}
+
+.workflow-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.workflow-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.workflow-field label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.workflow-select {
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  font-size: 13.5px;
+  cursor: pointer;
+}
+
+/* Activity Timeline */
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--primary-blue);
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.timeline-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.timeline-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.timeline-desc {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  margin: 2px 0;
+}
+
+.timeline-time {
+  font-size: 11.5px;
+  color: var(--text-muted);
+}

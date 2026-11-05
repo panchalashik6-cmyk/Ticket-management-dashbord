@@ -1,0 +1,49 @@
+/* StatusBadge Styling */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 11px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-badge.status-open {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-badge.status-in-progress {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.status-badge.status-resolved {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.status-badge.status-closed {
+  background-color: #f1f5f9;
+  color: #334155;
+}
+
+.status-badge.status-overdue {
+  background-color: #ffe4e6;
+  color: #be123c;
+}
+
+/* Dashboard table clean text variant matching screenshot */
+.status-text-only {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.status-text-only.overdue,
+.status-text-only.escalated {
+  color: #be185d;
+  font-weight: 600;
+}
